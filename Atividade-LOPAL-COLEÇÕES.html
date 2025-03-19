@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade-LOPAL-COLEÇÕES</title>
+</head>
+<body>
+    <script>
+ const alunos = ["Aline" , "Arthur" , "Barbara" , "Bruna Luise" , "Bruna Torres" , "Bruna Velôso" , "Cauã" , "Daniel" ,
+     "Davi"];
+    
+    let nome = prompt("Quer digitar um nome? Caso não queira clique em cancelar");
+
+    if (nome) {
+    alunos.push(nome); 
+    document.write("Novo nome adicionado: " + nome + "<br>");
+  }
+    for (let indice = 0; indice < alunos.length; indice++){
+            document.write(alunos[indice] + "<br>");
+    }
+
+   // function recarregarPagina() {
+    //location.reload();
+    //
+    nome = prompt("Quer digitar um novo nome? Caso não queira clique em cancelar")
+    if (nome) {
+    alunos.push(nome); 
+    document.write("Novo nome adicionado: " + nome + "<br>");
+    
+}
+
+ 
+    </script>
+</body>
+</html>
