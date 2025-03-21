@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrays_solução1</title>
+</head>
+<body>
+    <h1>Lista de Alunos</h1>
+    <button type="button" onclick="adicionarAlunos()">Adicionar Alunos</button>
+    <button type="button" onclick="removerUltimoAluno()">Remover Alunos</button>
+    <output>
+
+    </output>
+
+   
+   <script>
+
+    
+
+     let alunos = [   "<br> Aline" , "Arthur" , "Barbara" , "Bruna Luise" , "Bruna Torres" , "Bruna Velôso" , "Cauã" , "Daniel" ,
+     "Davi"];
+
+     function imprimirAlunos() {
+
+        document.querySelector("output").innerHTML = "";
+
+        for (let indice = 0; indice < alunos.length; indice++) {
+            document.querySelector("output").innerHTML += alunos[indice] + "<br>";
+            
+        }
+     }
+
+     function adicionarAlunos() {
+
+
+        let novoAluno = prompt("Digite o nome do(a) aluno(a)")
+        alunos.push(novoAluno);
+        opcaoUsuarios = confirm("Deseja adicionar mais um aluno?");
+
+    
+        while(opcaoUsuarios) {
+            adicionarAlunos();
+        }
+
+        imprimirAlunos();
+
+        
+
+
+     }
+
+     function removerUltimoAluno() {
+    if (alunos.length > 0) {
+        alunos.pop(); 
+        imprimirAlunos(); 
+    } else {
+        alert("Não há mais alunos para remover!");
+    }
+}
+
+
+         imprimirAlunos();
+
+     
+
+
+         let frutas = ["maçã" , "Banana" ,]
+         console.log(frutas)
+
+         frutas.push("Mamão")
+        console.log(frutas)
+
+        frutas.pop();
+        console.log(frutas)
+
+        // Problema 2
+        // Ops o ultimo nome foi digitado errado, e agora??
+        // com base na soluçao anterior, desenvolva uma nova soluçao 
+        // que permita remover o ultimo nome digitado na lista de alunos
+        // Dica: voce pode utilizar um novo botão.
+
+   </script> 
+</body>
+</html>
